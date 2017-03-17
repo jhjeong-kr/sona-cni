@@ -25,7 +25,7 @@ $ make build
 
 ## Install
 
-### Network configuration
+### CNI configuration
 Create a conf file to "/etc/cni/net.d"
 ```sh
 $ more /etc/cni/net.d/sona-cni.conf
@@ -33,7 +33,7 @@ TBD
 
 ```
 
-### Binary
+### Executable
 Copy the executable to "/opt/cni/bin"
 ```sh
 # Make sure build process is done successfully.
