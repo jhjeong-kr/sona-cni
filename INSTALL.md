@@ -23,9 +23,9 @@ This will set up a `vendor` directory in your current directory.
 $ make build
 ```
 
-## Run
+## Install
 
-### In-clustering
+### Network configuration
 ```sh
 # Make sure the docker image is accessable by kubernetes.
 $ sudo docker build -t plugin2sona .
@@ -34,7 +34,5 @@ $ kubectl create -f plugin2sona.yaml
 
 ```
 
-### Out-of-clustering
-```sh
-$ sudo ./plugin2sona -kubeconfig=/etc/kubernetes/admin.conf
-```
+### Binary
+Copy the executable to "/opt/cni/bin"
