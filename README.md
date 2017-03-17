@@ -1,2 +1,2 @@
-# plugin-to-SONA
-CNI plugin to SONA network.
+# SONA CNI
+SONA CNI connects two networks, "default(master CNI like flannel)" and "SONA"
