@@ -26,13 +26,18 @@ $ make build
 ## Install
 
 ### Network configuration
+Create a conf file to "/etc/cni/net.d"
 ```sh
-# Make sure the docker image is accessable by kubernetes.
-$ sudo docker build -t plugin2sona .
-
-$ kubectl create -f plugin2sona.yaml
+$ more /etc/cni/net.d/sona-cni.conf
+TBD
 
 ```
 
 ### Binary
 Copy the executable to "/opt/cni/bin"
+```sh
+# Make sure build process is done successfully.
+$ sudo copy sona-cni /opt/cni/bin
+$ sudo chown root /opt/cni/bin/sona-cni
+
+```
