@@ -1,13 +1,25 @@
 package main
 
 import (
-	config "plugin-to-SONA/config"
 	log "plugin-to-SONA/log"
-	plugin "plugin-to-SONA/v1"
+
+	//	"github.com/containernetworking/cni/pkg/invoke"
+	"github.com/containernetworking/cni/pkg/skel"
+	"github.com/containernetworking/cni/pkg/version"
+	//	"github.com/containernetworking/cni/pkg/types"
 )
 
+func cmdAdd(args *skel.CmdArgs) error {
+	return nil
+}
+
+func cmdDel(args *skel.CmdArgs) error {
+	return nil
+}
+
 func main() {
-	log.Info("starting plugin for SONA")
-	config.ParseCommandLine()
-	log.Info("terminating with code: ", plugin.Run(), ", bye, bye~")
+	log.Info("sona cni is invoked")
+	//	config.ParseCommandLine()
+	skel.PluginMain(cmdAdd, cmdDel, version.All)
+	log.Info("sona cni is terminated")
 }
